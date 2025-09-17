@@ -23,7 +23,3 @@ La página está desarrollada con **HTML y CSS**, incluye secciones de servicios
 
 ---
 
-## 🚀 Cómo ver la web
-1. Clonar el repositorio:
-```bash
-git clone https://github.com/georgealexandrunechita/clinicadentalcamas.git
