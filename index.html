@@ -6,6 +6,12 @@
   <title>Clínica Dental</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+  header.scrolled {
+    background-color: #1a2a3a;
+    color: #ffd200;
+  }
+</style>
 <body>
   <!-- VIDEO DE FONDO SOLO PARA HEADER + HERO -->
   <div class="video-container">
@@ -16,7 +22,8 @@
   </div>
 
   <!-- HEADER -->
-  <header>
+  <<!-- HEADER -->
+  <header id="header">
     <div class="logo">🦷 Clínica</div>
     <nav>
       <ul>
@@ -28,7 +35,10 @@
       </ul>
     </nav>
     <a href="#" class="btn">Pide tu cita</a>
+    <!-- Botón hamburguesa al final -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
   </header>
+  
 
   <!-- HERO -->
   <section class="hero">
@@ -103,3 +113,21 @@
   </footer>
 </body>
 </html>
+
+<script>
+  const header = document.getElementById("header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 5) { // cuando bajas más de 50px
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+  
+    // JS para abrir/cerrar menú en móvil
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+      document.querySelector("nav ul").classList.toggle("show");
+    });
+
+</script>
